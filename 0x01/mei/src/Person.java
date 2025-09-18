@@ -1,5 +1,3 @@
-package mei;
-
 import java.time.Year;
 import java.time.YearMonth;
 import java.util.Date;
