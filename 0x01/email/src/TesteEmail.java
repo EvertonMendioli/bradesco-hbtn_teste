@@ -23,7 +23,7 @@ public class TesteEmail {
     public void testar_email_sem_arroba(){
         Pessoa pessoa = new Pessoa();
 
-        pessoa.emailValid("email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br");
-        assertEquals(false, pessoa);
+        boolean teste =  pessoa.emailValid("email_teste_muito_longo_nao_deve_ser_valido@dominio.com.br");
+        assertEquals(false, teste);
     }
 }
