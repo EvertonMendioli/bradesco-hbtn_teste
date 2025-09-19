@@ -13,12 +13,12 @@ import org.junit.jupiter.api.Test;
 public class PersonTest {
 
     
-    public Person p = new Person();
+    public static Person p = new Person();
 
 
     @SuppressWarnings("deprecation")
     @BeforeAll
-    public void setup(){
+    static void setup(){
        // Person p = new Person();
         p.setName("Paul");
         p.setSurname("McCartney");
@@ -29,18 +29,18 @@ public class PersonTest {
     }
 
     @Test
-    public void show_full_name(){
+    void show_full_name(){
        assertEquals("Paul McCartney", p.fullName());
     }
 
     @Test
-    public void test_calculateYearlySalary(){
+    void test_calculateYearlySalary(){
         p.setSalary(1200);
         assertEquals(14400, p.calculateYearlySalary() );
     }
 
     @Test
-    public void person_is_MEI(){
+    void person_is_MEI(){
         p.setPublicServer(false);
         p.setPensioner(false);
         p.setAnotherCompanyOwner(false);
@@ -49,7 +49,7 @@ public class PersonTest {
     }
 
     @Test
-    public void person_is_not_MEI(){
+    void person_is_not_MEI(){
         p.setPublicServer(true);
         assertFalse(p.isMEI());
     }
